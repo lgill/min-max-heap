@@ -3,16 +3,15 @@ package minMax;
 
 
 public class MinMaxHeap {
-	 // DO NOT CHANGE THESE VARIABLES AND METHODS
     private int currentSize;
     private int[] arr;
-    public MinMaxHeap(int capacity){//Constructor
+    public MinMaxHeap(int capacity){
         arr = new int[capacity + 1];
         currentSize = 0;
 }
     public boolean isFull(){return currentSize == arr.length - 1;}
     public boolean isEmpty(){return currentSize == 0;}
-    // COMPLETE THE FOLLOWING METHODS
+
     public void insert(int x){//PRE: The heap is not full
     	currentSize++;
     	arr[currentSize] = x;
@@ -51,7 +50,6 @@ public class MinMaxHeap {
     	return max;
     }
     
-    // Private methods go here.
     
     private boolean minLevel(int i) {
     	if (Math.floor(Math.log(i)/Math.log(2)) % 2 == 0) {
